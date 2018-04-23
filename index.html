@@ -9,9 +9,75 @@
 </head>
 <body class="shower list">
 	<header class="caption">
-		<h1>Presentation Title</h1>
-		<p><a href="">Yours Truly</a>, Famous Inc.</p>
+		<h1>События в JavaScript</h1>
+		<!--<p><a href="">События в JavaScript</a></p>-->
 	</header>
+
+	<section class="slide">
+		<h2 class="shout">События в<br>JavaScript</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Зачем нам события?</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Виды событий</h2>
+		<ol>
+			<li>Атрибуты DOM елемента</li>
+			<li>Cвойства DOM-объекта</li>
+			<li>Специальные методы методы</li>
+		</ol>
+	</section>
+
+<section class="slide">
+		<h2>События как атрибуты</h2>
+		<pre>
+		<code>
+&lt;button <mark class="important">onclick="alert('Клик!')"</mark> &gt;
+&lt;button <mark class="important">onclick="handleClick()"</mark> &gt;
+		</code>
+		</pre>
+</section>
+
+<section class="slide">
+<h2>События как cвойства DOM-объекта</h2>
+<pre><code>
+&lt;input id="elem" type="button" value="Нажми меня" />
+&lt;script>
+<mark class="important">elem.onclick</mark> = function() {
+	alert( 'Спасибо' );
+};
+&lt;/script>
+</code></pre>
+</section>
+
+<section class="slide">
+<h2>Специальные методы</h2>
+<pre><code>
+element.addEventListener( <mark class="important">event</mark>, <mark class="important">handler</mark> [, <mark class="important">phase</mark> ]);
+</code></pre>
+
+	<ul>
+		<li>event - имя события, например click</li>
+		<li>handler - ссылка на функцию, которую надо поставить обработчиком.</li>
+		<li>phase - </li>
+	</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Сравнение addEventListener и onclick</h2>
+		<ul>
+			<li>Некоторые события можно назначить только через addEventListener.</li>
+			<li>Метод addEventListener позволяет назначить много обработчиков на одно событие.</li>
+		</ul>
+		<br>
+		<ul>
+			<li>Обработчик, назначенный через onclick, проще удалить или заменить.</li>
+			<li>Метод onclick кросс-браузерный.</li>
+		</ul>
+	</section>
+
 	<section class="slide">
 		<h2>Slide Header</h2>
 		<p>Echo Park 8-bit sustainable umami deep v Kickstarter. DIY cliche typewriter brunch, Odd Future sriracha pickled aesthetic. Farm-to-table bespoke fingerstache, kale chips umami brunch letterpress.</p>
